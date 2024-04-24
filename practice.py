@@ -433,44 +433,55 @@
 # print(sq.get_no_of_sides())
 # print(sq.length)
 
-class Bank_account():
-    def __init__(self,title,balance,accountNo):
-        self.__title=title
-        self.__balance=balance
-        self.__accountNo=accountNo
-    def gettitle(self):
-        return self.__title
-    def settitle(self,name):
-        self.__title=name
-        return self.__title
-    def getbalance(self):
-        return self.__balance
-    def getaccountNo(self):
-        return self.__accountNo
-    def setaccountNo(self,accNo):
-        self.__accountNo=accNo
-        return __accountNo
+# class Bank_account():
+#     def __init__(self,title,balance,accountNo):
+#         self.__title=title
+#         self.__balance=balance
+#         self.__accountNo=accountNo
+#     def gettitle(self):
+#         return self.__title
+#     def settitle(self,name):
+#         self.__title=name
+#         return self.__title
+#     def getbalance(self):
+#         return self.__balance
+#     def getaccountNo(self):
+#         return self.__accountNo
+#     def setaccountNo(self,accNo):
+#         self.__accountNo=accNo
+#         return __accountNo
        
-    def withdraw(self,amount):
-        return self.balance-amount
-    def deposit(self,amount):
-        return self.balance+amount
+#     def withdraw(self,amount):
+#         return self.balance-amount
+#     def deposit(self,amount):
+#         return self.balance+amount
     
-class saving(Bank_account):
-    def __init__(self,interest_rate):
-        self.interest_rate=interest_rate
+# class saving(Bank_account):
+#     def __init__(self,interest_rate):
+#         self.interest_rate=interest_rate
         
         
-    def balanceafterinterest(self):
-        interest_earned = self.balance * (self.interest_rate // 100)
-        super().getbalance()+=interest_earned
-        return super().getbalance()
+#     def balanceafterinterest(self):
+#         interest_earned = self.balance * (self.interest_rate // 100)
+#         super().getbalance()+=interest_earned
+#         return super().getbalance()
     
-class Current(Bank_account):
-    def __init__(self,interest_rate_current):
-        self.interest_rate_current()
+# class Current(Bank_account):
+#     def __init__(self,interest_rate_current):
+#         self.interest_rate_current()
     
 
+class Complex:
+    def __init__(self,real,img):
+        self.real=real
+        self.img=img
+    def __add__(self,other):
+        return Complex(self.real+other.real,self.img+other.img)
+    
+a=Complex(5,7)
+b=Complex(2,3)
+c=a+b
+print(c.real,c.img)
 
     
     
