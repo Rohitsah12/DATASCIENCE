@@ -477,11 +477,20 @@ class Complex:
         self.img=img
     def __add__(self,other):
         return Complex(self.real+other.real,self.img+other.img)
-    
+    def __sub__(self,other):
+        return Complex(self.real-other.real,self.img-other.img)
+    def __mul__(self,other):
+        return Complex(self.real*other.real,self.img*other.img)
+    def __truediv__(self,other):
+        
 a=Complex(5,7)
 b=Complex(2,3)
 c=a+b
+d=a-b
+e=a*b
 print(c.real,c.img)
+print(d.real,d.img)
+print(e.real,e.img)
 
     
     
